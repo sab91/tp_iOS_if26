@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -96,17 +96,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="entrerNombre:" destination="UXr-aq-MDg" eventType="editingDidEnd" id="KZl-mr-kbI"/>
+                                    <action selector="enterNumber:" destination="UXr-aq-MDg" eventType="editingChanged" id="ycT-6X-MRm"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qDi-oJ-fLd">
-                                <rect key="frame" x="164" y="228" width="47" height="30"/>
+                                <rect key="frame" x="139" y="228" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Valider"/>
                                 <connections>
-                                    <action selector="testerNombre:" destination="UXr-aq-MDg" eventType="touchUpInside" id="PXH-Av-wW2"/>
-                                    <action selector="valider:" destination="UXr-aq-MDg" eventType="touchUpInside" id="K2l-Rf-Vf9"/>
-                                    <segue destination="aDM-4V-9DO" kind="show" id="5xc-IR-J8t"/>
+                                    <action selector="testerNombreWithSender:" destination="UXr-aq-MDg" eventType="touchUpInside" id="l8z-yD-skI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oc9-FQ-6TQ">
@@ -129,29 +127,14 @@
                         <viewLayoutGuide key="safeArea" id="zjW-ka-ciq"/>
                     </view>
                     <connections>
-                        <outlet property="champsText" destination="NU4-ZW-lQy" id="l5m-7i-ZTH"/>
-                        <outlet property="resultat" destination="8nb-iy-Spm" id="XTZ-ep-nBR"/>
-                        <outlet property="valider" destination="qDi-oJ-fLd" id="YaZ-05-vdn"/>
+                        <outlet property="boutonValider" destination="qDi-oJ-fLd" id="mEi-2i-zJ9"/>
+                        <outlet property="champNombre" destination="NU4-ZW-lQy" id="kTC-dl-Ejs"/>
+                        <outlet property="resultat" destination="8nb-iy-Spm" id="ghJ-d1-m9a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mhE-7S-u01" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="828" y="-290.10494752623691"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="T9H-xg-cTa">
-            <objects>
-                <viewController id="aDM-4V-9DO" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7Gl-0R-uhs">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="bEG-PJ-eRE"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Fv-23-Qbc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1702" y="-298"/>
         </scene>
     </scenes>
 </document>
