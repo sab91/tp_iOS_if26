@@ -65,19 +65,27 @@ let p2 = Etudiant(nom: "Stain", prenom: "Zlatan", age: 43, nocarte: "6")
 p2.description()
 
 
-//protocol Utt {
-//    func juryResultat() -> String {
-//
-//    }
-//
-//    func GPA() -> Int {
-//
-//    }
-//
-//}
-//
-//
-//class Doctorant : Etudiant, Utt {
-//
-//}
+protocol Utt {
+    func juryResultat() -> String
+    func GPA() -> Int
+
+}
+
+
+class Doctorant : Etudiant, Utt {
+    func juryResultat() -> String {
+        print("mms")
+        return "mms"
+    }
+    
+    func GPA() -> Int {
+        return 1
+    }
+}
+
+let p3 = Doctorant()
+
+p3.juryResultat()
+
+
 
